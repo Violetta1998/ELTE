@@ -19,6 +19,30 @@ namespace LU_decomposition
             return a;
         }
 
+        public static double[,] multiplyMatrix(double[,] A, double[,] B)
+        {
+
+            if (A.GetLength(1) != B.GetLength(0)) throw new Exception("Матрицы нельзя перемножить");
+
+            int ma = A.GetLength(0);
+            int mb = B.GetLength(0);
+            int nb = B.GetLength(1);
+
+            double[,] resultMatrix = new double[ma, nb];
+
+            for (int i = 0; i < A.GetLength(0); i++)
+            {
+                for (int j = 0; j < nb; j++)
+                {
+                    for (int k = 0; k < mb; k++)
+                    {
+                        resultMatrix[i, j] += A[i, k] * B[k, j];
+                    }
+                }
+            }
+            return resultMatrix;
+        }
+
         public static double[,] decomposition(double[,] a, double[,] E)
         {
             int i, j, k;
@@ -50,50 +74,42 @@ namespace LU_decomposition
             }
             /*Решение L*Y = E, U*X = Y*/
             int count = 0;
-            double[,] y = new double[a.GetLength(0), a.GetLength(0)];
+            double[] y = new double[a.GetLength(0)];
             double[] d = extractColumn(E, count);
-            double[,] x = new double[a.GetLength(0), a.GetLength(0)];
-            
-            while(count < a.GetLength(0))
+            double[] x = new double[a.GetLength(0)];
+            double[,] result = new double[a.GetLength(0), a.GetLength(0)];
+
+            while (count < a.GetLength(0))
             {
                 d = extractColumn(E, count);
-                y[0, count] = d[count];
+                y[0] = d[0];
                 for (j = 1; j < MaxOrder; j++)
                 {
-                    y[j, count] = d[j];
+                    y[j] = d[j];
                     for (i = 0; i < j; i++)
                     {
-                        y[j, count] = y[j, count] - y[i, count] * l[j, i];
+                        y[j] = y[j] - y[i] * l[j, i];
                     }
                 }
-                x[count, MaxOrder - 1] = y[MaxOrder - 1, count] / u[MaxOrder - 1, MaxOrder - 1];
-                count++;
-            }
-            count = 2;
-            while (count >= 0)
-            {
-                d = extractColumn(y, count);
-                for (j = MaxOrder -1; j >= 0; j--)
+                x[MaxOrder - 1] = y[MaxOrder - 1] / u[MaxOrder - 1, MaxOrder - 1];
+                for (j = MaxOrder - 2; j >= 0; j--)
                 {
-                    x[j, count] = d[j];
+                    x[j] = y[j];
                     for (i = MaxOrder - 1; i > j; i--)
                     {
-                        x[j, count] = x[j, count] - x[i, count] * u[j, i];
+                        x[j] = x[j] - x[i] * u[j, i];
                     }
-                    x[j, count] = x[j, count] / u[j, j];
-                }
-                count--;
-            }
-            for( i = 0; i < x.GetLength(0); i++)
-            {
-                for (int g = 0; g < x.GetLength(1); g++)
+                    x[j] = x[j] / u[j, j];
+                 }
+                for (int g = 0; g < x.Length; g++)
                 {
-                    Console.Write(x[i, g] + " ");
+                    result[g, count] = x[g];
                 }
-                Console.WriteLine();
+                count++;
+               
             }
-            
-            return x;
+          
+            return result;
         }
 
 
@@ -115,8 +131,25 @@ namespace LU_decomposition
 
             double[,] B = new double[4, 1] { { 5 }, { 3 }, { 10 }, { 7 } };
 
-            double[,] result = decomposition(a, E);
-            
+            double[,] obrMatrix = decomposition(a, E);
+            for(int i = 0; i < obrMatrix.GetLength(0); i++)
+            {
+                for(int j = 0; j < obrMatrix.GetLength(1); j++)
+                {
+                    Console.Write(obrMatrix[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Результат: ");
+            double[,] x = multiplyMatrix(obrMatrix, B);
+            for (int i = 0; i < x.GetLength(0); i++)
+            {
+                for (int j = 0; j < x.GetLength(1); j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
             Console.ReadKey();
         }
     }
