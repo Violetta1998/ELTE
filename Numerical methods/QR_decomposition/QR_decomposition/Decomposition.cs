@@ -134,7 +134,7 @@ namespace QR_decomposition
             return newMatrix;
         }
 
-        public double[,] gramSchmidtProcess(int col, int row, double[,] matrixA)
+        public double[] gramSchmidtProcess(int col, int row, double[,] matrixA, double[,] matrixB)
         {
             double[,] matrixR = new double[col, col];
             double[,] matrixQ = new double[row, col];
@@ -190,7 +190,8 @@ namespace QR_decomposition
                 }
             }
 
-            for(int i = 0; i < matrixQ.GetLength(0); i++)
+            Console.WriteLine("Матрица Q: ");
+            for (int i = 0; i < matrixQ.GetLength(0); i++)
             {
                 for(int j = 0; j < matrixQ.GetLength(1); j++)
                 {
@@ -200,7 +201,7 @@ namespace QR_decomposition
             }
 
             Console.WriteLine();
-
+            Console.WriteLine("Матрица R: ");
             for (int i = 0; i < matrixR.GetLength(0); i++)
             {
                 for (int j = 0; j < matrixR.GetLength(1); j++)
@@ -210,7 +211,23 @@ namespace QR_decomposition
                 Console.WriteLine();
             }
 
-            return matrixR;
+            Console.WriteLine();
+            Console.WriteLine("Результат: ");
+
+            double[] resX = new double[col];
+            matrixB = multiplyMatrix(transposeMatrix(matrixQ), matrixB);
+            for (int i = matrixR.GetLength(0)-1; i >= 0; i--)
+            {
+                double s = 0;
+                for (int j = 0; j < matrixR.GetLength(0); j++)
+                {
+                    s += matrixR[i, j] * resX[j];
+                }
+                resX[i] = (matrixB[i, 0] - s) / matrixR[i, i];
+                Console.WriteLine("X" + (i + 1) + " " + resX[i]);
+            }
+
+            return resX;
         }
     }
 }
