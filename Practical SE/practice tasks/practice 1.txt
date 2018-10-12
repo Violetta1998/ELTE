@@ -1,0 +1,14 @@
+A student has a name, a nationality, and an average of his grades.
+
+1. Create a new project, and implement the Student class.
+Some attributes of the Student may change later, some not.
+Reflect to this behavior by introducing proper setter/getter methods. Don't forget the a constructor(s).
+
+2. Implement a simple test environment (menu or so), which lets the user to test this class (read in the attributes, instantiates the class, write out the attributes).
+
+3. Add a List to your main program, that can hold Student objects.
+Read in some students, and tell which student has the best/worst average (remember the programming theorems).
+Tell the difference and the average of the worst and best averages.
+
+4. Now that you know the average of the averages...
+how many students have an average better than the average of the averages? (remember the programming theorems)
