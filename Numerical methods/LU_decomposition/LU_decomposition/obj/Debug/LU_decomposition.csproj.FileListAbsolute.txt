@@ -1,0 +1,6 @@
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\LU_decomposition\LU_decomposition\bin\Debug\LU_decomposition.exe.config
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\LU_decomposition\LU_decomposition\bin\Debug\LU_decomposition.exe
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\LU_decomposition\LU_decomposition\bin\Debug\LU_decomposition.pdb
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\LU_decomposition\LU_decomposition\obj\Debug\LU_decomposition.csprojResolveAssemblyReference.cache
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\LU_decomposition\LU_decomposition\obj\Debug\LU_decomposition.exe
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\LU_decomposition\LU_decomposition\obj\Debug\LU_decomposition.pdb
