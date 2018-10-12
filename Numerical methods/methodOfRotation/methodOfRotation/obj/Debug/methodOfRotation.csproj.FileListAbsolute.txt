@@ -1,0 +1,6 @@
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotation\methodOfRotation\bin\Debug\methodOfRotation.exe.config
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotation\methodOfRotation\bin\Debug\methodOfRotation.exe
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotation\methodOfRotation\bin\Debug\methodOfRotation.pdb
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotation\methodOfRotation\obj\Debug\methodOfRotation.csprojResolveAssemblyReference.cache
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotation\methodOfRotation\obj\Debug\methodOfRotation.exe
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotation\methodOfRotation\obj\Debug\methodOfRotation.pdb

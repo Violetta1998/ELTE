@@ -1,0 +1,6 @@
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\QR_decomposition\QR_decomposition\bin\Debug\QR_decomposition.exe.config
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\QR_decomposition\QR_decomposition\bin\Debug\QR_decomposition.exe
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\QR_decomposition\QR_decomposition\bin\Debug\QR_decomposition.pdb
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\QR_decomposition\QR_decomposition\obj\Debug\QR_decomposition.csprojResolveAssemblyReference.cache
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\QR_decomposition\QR_decomposition\obj\Debug\QR_decomposition.exe
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\QR_decomposition\QR_decomposition\obj\Debug\QR_decomposition.pdb

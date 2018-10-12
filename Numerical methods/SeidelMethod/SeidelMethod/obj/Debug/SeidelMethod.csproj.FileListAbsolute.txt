@@ -1,0 +1,6 @@
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\SeidelMethod\SeidelMethod\bin\Debug\SeidelMethod.exe.config
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\SeidelMethod\SeidelMethod\bin\Debug\SeidelMethod.exe
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\SeidelMethod\SeidelMethod\bin\Debug\SeidelMethod.pdb
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\SeidelMethod\SeidelMethod\obj\Debug\SeidelMethod.csprojResolveAssemblyReference.cache
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\SeidelMethod\SeidelMethod\obj\Debug\SeidelMethod.exe
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\SeidelMethod\SeidelMethod\obj\Debug\SeidelMethod.pdb
