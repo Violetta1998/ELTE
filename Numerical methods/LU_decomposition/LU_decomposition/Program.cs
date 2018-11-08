@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -108,18 +109,24 @@ namespace LU_decomposition
                 count++;
                
             }
-          
             return result;
         }
 
 
         static void Main(string[] args)
         {
-            double[,] a = new double[4, 4] { { 10, 6, 2, 0 }, 
+            Random rnd = new Random();
+            int lines = 300; int columns = 300;
+            double[,] matrix = new double[lines, columns];
+            for (int x = 0; x < columns; ++x)
+                for (int y = 0; y < lines; ++y)
+                    matrix[y, x] = rnd.Next(10);
+
+            /*double[,] a = new double[4, 4] { { 10, 6, 2, 0 }, 
                                              { 5, 1, -2, 4 }, 
                                              { 3, 5, 1, -1 }, 
-                                             { 0, 6, -2, 2 } };
-            double[,] E = new double[4, 4];
+                                             { 0, 6, -2, 2 } };*/
+            double[,] E = new double[lines, columns];
             for(int i = 0; i < E.GetLength(0); i++)
             {
                 for (int j = 0; j < E.GetLength(1); j++)
@@ -129,10 +136,23 @@ namespace LU_decomposition
                 }
             }
 
-            double[,] B = new double[4, 1] { { 5 }, { 3 }, { 10 }, { 7 } };
+            Stopwatch time = new Stopwatch();
+            time.Start();
 
-            double[,] obrMatrix = decomposition(a, E);
-            for(int i = 0; i < obrMatrix.GetLength(0); i++)
+           // double[,] B = new double[4, 1] { { 5 }, { 3 }, { 10 }, { 7 } };
+
+            double[,] obrMatrix = decomposition(matrix, E);
+
+            time.Stop();
+            TimeSpan ts = time.Elapsed;
+
+            // Format and display the TimeSpan value.
+            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+                ts.Hours, ts.Minutes, ts.Seconds,
+                ts.Milliseconds / 10);
+            Console.WriteLine("RunTime " + elapsedTime);
+
+            /*for (int i = 0; i < obrMatrix.GetLength(0); i++)
             {
                 for(int j = 0; j < obrMatrix.GetLength(1); j++)
                 {
@@ -140,7 +160,9 @@ namespace LU_decomposition
                 }
                 Console.WriteLine();
             }
+            /*
             Console.WriteLine("Результат: ");
+
             double[,] x = multiplyMatrix(obrMatrix, B);
             for (int i = 0; i < x.GetLength(0); i++)
             {
@@ -149,7 +171,7 @@ namespace LU_decomposition
                     Console.Write(x[i, j] + " ");
                 }
                 Console.WriteLine();
-            }
+            }*/
             Console.ReadKey();
         }
     }
