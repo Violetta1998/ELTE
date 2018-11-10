@@ -1,0 +1,6 @@
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotationForEigenvalues\methodOfRotationForEigenvalues\bin\Debug\methodOfRotationForEigenvalues.exe.config
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotationForEigenvalues\methodOfRotationForEigenvalues\obj\Debug\methodOfRotationForEigenvalues.csprojResolveAssemblyReference.cache
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotationForEigenvalues\methodOfRotationForEigenvalues\bin\Debug\methodOfRotationForEigenvalues.exe
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotationForEigenvalues\methodOfRotationForEigenvalues\bin\Debug\methodOfRotationForEigenvalues.pdb
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotationForEigenvalues\methodOfRotationForEigenvalues\obj\Debug\methodOfRotationForEigenvalues.exe
+C:\Users\Виолетта\Desktop\МИСИС\БПМ\3 курс осень-зима\Численные методы\methodOfRotationForEigenvalues\methodOfRotationForEigenvalues\obj\Debug\methodOfRotationForEigenvalues.pdb

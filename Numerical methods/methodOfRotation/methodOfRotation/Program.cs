@@ -56,18 +56,19 @@ namespace methodOfRotation
             //                                 { -1, 2, -1, 1}, 
             //                                 { 0, -1, 2, 5} };
 
-            double[,] M = new double[4, 5] { {1, -2, 3, 4, 10 },
+            double[,] M = new double[4, 5] { {1, -2, 3, 4, 10 },//исходная матрица, последний столбец - столбец B
                                              { 2, 1, -4, 3, 2},
                                              { 3, -4, -1, -2, 7},
                                              { 4, 3, 2, -1, 6} };
 
             int row = M.GetLength(0);
             int col = M.GetLength(1);
-            double[,] resM = new double[4, 5];//результирующая матрица
+            double[,] resM = new double[row, col];//результирующая матрица
            
             resM = rotationMethod(M, row, col);//1 шаг, после которого зануляются an1 элементы
-            
-            for(int s = 1; s < M.GetLength(0) - 1; s++)//повторяем процесс n-2 раз
+
+            int step = 1;
+            for (int s = 0; s < row - 1; s++)//повторяем процесс n-1 раз
             {
                 double[,] tempM = new double[row - 1, col - 1];
 
@@ -75,11 +76,12 @@ namespace methodOfRotation
                 {
                     for (int k = 0; k < col - 1; k++)
                     {
-                        tempM[j, k] = resM[j + 1, k + 1];
+                        tempM[j, k] = resM[j + step, k + step];
                     }
                 }
 
                 tempM = rotationMethod(tempM, row - 1, col - 1);
+
                 int countRow = M.GetLength(0) - row + 1;
                 for (int j = 0; j < row - 1; j++)//заполняем результирующую матрицу новыми значениями
                 {
@@ -91,8 +93,10 @@ namespace methodOfRotation
                     }
                     countRow++;
                 }
+
                 row--;
                 col--;
+                step++;
             }
 
             row = M.GetLength(0);
