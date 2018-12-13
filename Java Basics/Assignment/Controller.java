@@ -86,7 +86,7 @@ public class Controller {
 
     public static void registerProducts() {
         System.out.println("Write Product's description: ");
-        String description = scanner.nextLine();
+        String description = scanner.next();
         System.out.println("Write it's barcode: ");
         long barcode = scanner.nextInt();
         System.out.println("Write the serial number: ");
